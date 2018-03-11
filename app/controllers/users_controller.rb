@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     @q = User.ransack(params[:q])
-    @users = @q.result(:distinct => true).includes(:cancer, :treatment, :logs, :symptoms).page(params[:page]).per(10)
+    @users = @q.result(:distinct => true).includes(:cancer, :treatment, :logs).page(params[:page]).per(10)
 
     render("users/index.html.erb")
   end
