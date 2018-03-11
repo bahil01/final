@@ -6,10 +6,6 @@ class Symptom < ApplicationRecord
 
   # Indirect associations
 
-  has_many   :users,
-             :through => :logs,
-             :source => :user
-
   # Validations
 
 end

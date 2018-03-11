@@ -12,10 +12,6 @@ class User < ApplicationRecord
 
   # Indirect associations
 
-  has_many   :symptoms,
-             :through => :logs,
-             :source => :symptom
-
   # Validations
 
 end
