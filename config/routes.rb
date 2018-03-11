@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "users#index"
   # Routes for the Log resource:
   # CREATE
   get "/logs/new", :controller => "logs", :action => "new"
